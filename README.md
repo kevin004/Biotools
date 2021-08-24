@@ -1,8 +1,12 @@
 # Biotools
-Sequence manipulation, FASTA parsing, and DNA homology.
+Sequence manipulation, FASTA parsing, DNA homology, and determine possible coding sequences and their likelihood by examining consensus nucleotides.
 
-There are four files:
-Biotools.py
+There are eight files:
+Biotools.py - main
+BioAnalyzer.py
+BioSequence.py
+BioTranslator.py
+CODONS.py
 Fastaparser.py
 sequence.fasta
 README.md
