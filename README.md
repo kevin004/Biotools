@@ -1,5 +1,6 @@
 # Biotools
 IP: Need to create tests for each individual file. Tests are created for the BioTools.py file already.
+    Will also update the FastaParser for more information instead of simply for use in testing purposes.
 Sequence manipulation, FASTA parsing, DNA homology, and determine possible coding sequences and their likelihood by examining consensus nucleotides.
 
 There are eight files:
