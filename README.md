@@ -5,7 +5,7 @@ IP: Need to create tests for each individual file. Tests are created for the Bio
 BioTools performs the following: Sequence manipulation, FASTA parsing, DNA homology, and determining possible coding sequences and their likelihood by examining consensus nucleotides.
 
 There are eight files:
-BioTools.py - main
+BioTools.py - main - inherits from BioAnalyzer, BioSequence, and BioTranslator
 BioAnalyzer.py
 BioSequence.py
 BioTranslator.py
