@@ -1,8 +1,6 @@
-'''Class to find potential coding sequences in segment of DNA. This
-class further determines the likelihood of a coding sequence near an
-'ATG'/'AUG' (start codon) through consensus nucleotides nearby and 
-upstream. Functions include: find_start_lst, find_stop_lst, find_codon_lst,
-find_cds_length, find_cds, find_cds_likelihood.'''
+'''Class to find potential coding sequences in segment of DNA. This class further determines the likelihood of a coding sequence near an 'ATG'/'AUG' 
+(start codon) through consensus nucleotides nearby and upstream. Functions include: find_start_lst, find_stop_lst, find_codon_lst, find_cds_length, 
+find_cds, find_cds_likelihood.'''
 import FastaParser
 from CODONS import CODONS
 
