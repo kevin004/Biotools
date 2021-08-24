@@ -1,7 +1,5 @@
-'''Basic class to perform bioinformatics analysis. Functions: complement, reverse complement, 
-transcribe, translate, find start codon, find stop codons, find nucleotide length between start 
-and stop, find amino acid length sequence alignments, gc content, and determine percent homology between 
-DNA strands of the same or differing length'''
+'''Class to perform basic DNA/RNA manipulation. Functions: complement, reverse complement, 
+transcribe,gc content.'''
 import FastaParser
 from CODONS import CODONS
 
