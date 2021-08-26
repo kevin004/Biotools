@@ -106,3 +106,4 @@ if __name__ == '__main__':
     new_lst = fastaparser.parseFasta(file1)
 
     comp = []
+    #Create test case
