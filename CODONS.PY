@@ -1,3 +1,4 @@
+#Dictionary of codons for easy access and more concise code in other modules.
 CODONS = ({'F': ['UUU', 'UUC'], 'L': ['UUA', 'UUG', 'CUA', 'CUU'], 'I': ['AUU', 'AUC', 'AUA'],
         'M': ['AUG'], 'V': ['GUU', 'GUC', 'GUA', 'GUG'], 'S': ['UCU', 'UCC', 'UCA', 'UCG', 'AGU',
         'AGC'], 'P': ['CCU', 'CCC', 'CCA', 'CCG'], 'T': ['ACU', 'ACC', 'ACA', 'ACG'],
