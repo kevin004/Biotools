@@ -1,5 +1,4 @@
-'''Class to perform basic DNA/RNA manipulation. Functions: complement, reverse complement, 
-transcribe,gc content.'''
+'''Class to perform basic DNA/RNA manipulation. Functions: complement, reverse complement, transcribe,gc content.'''
 import FastaParser
 from CODONS import CODONS
 
@@ -7,6 +6,7 @@ class BioSequence:
     def __init__(self):
         pass
 
+    #Return DNA complement, e.g., 'A' to 'T', 'G' to 'C', and vice versa.
     def complement(self):
         comp_seq = ''
 
@@ -22,6 +22,7 @@ class BioSequence:
         self.DNA_complement_sequence = comp_seq
         return comp_seq
 
+    #Return reverse complement.
     def rev_complement(self):
         rev_comp = self.DNA_sequence[::-1]
         comp_seq = ''
@@ -37,17 +38,20 @@ class BioSequence:
                 comp_seq += 'G'
         self.DNA_reverse_complement = comp_seq
         return comp_seq
-
+    
+    #Transcribe DNA into RNA and return RNA.
     def transcribe(self):
         tran_seq = self.DNA_sequence.replace('T', 'U')
         self.RNA_sequence = tran_seq
         return tran_seq
 
+    #Reverse transcribe RNA into DNA and return DNA.
     def rev_transcribe(self):
         rtran_seq = self.RNA_sequence.replace('U', 'T')
         self.DNA_sequence = rtran_seq
         return rtran_seq
 
+    #Determine GC content in decimal format for DNA sequence, could also return as percent through multiplying by 100 but I prefer decimal.
     def gc_content(self):
         gc = 0.0
         for nuc in self.DNA_sequence:
@@ -55,6 +59,7 @@ class BioSequence:
                 gc += 1
         return gc / len(self.DNA_sequence)
 
+    #Determine highest possible homology between two sequences even if one sequence is longer than the other.
     def homology(self, sequence2):
         sequence1 = self.DNA_sequence
         homology = 0.0
