@@ -6,12 +6,14 @@ import FastaParser
 class BioTranslator:
     def __init__(self):
         pass
-             
+    
+    #Return list of possible amino acid lengths.
     def amino_acid_length(self):
         nucleotides = self.find_CDS_length()
         AA_length = [DNA // 3 for DNA in nucleotides]
         return 
         
+    #Translate list of DNA coding sequences to list of amino acid sequences and return list.
     def translate(self):
         start = self.find_start_lst()
         stop = self.find_stop_lst()
@@ -73,6 +75,7 @@ class BioTranslator:
             self.AA_sequence.append(transl_seq)
         return self.AA_sequence
 
+    #Reverse translate list of amino acids to list of RNA sequences.
     def rev_translate(self):
         nucleotides_lst = []
 
