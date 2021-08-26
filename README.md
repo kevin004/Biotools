@@ -14,5 +14,4 @@ FastaParser.py
 sequence.fasta
 README.md
 
-To test the code, run the BioTools file, which has test code at the bottom. The Fastaparser is simple and designed only for testing purposes; it will be refined at a later time.
-
+To test the code, run the BioTools file, which has test code at the bottom.
