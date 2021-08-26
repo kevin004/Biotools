@@ -95,5 +95,4 @@ if __name__ == '__main__':
     for species in new_lst:
         seq = BioSequence(DNA_sequence=species[2])
         comp.append(seq)
-    for DNA in comp:
-        print(DNA)
+    #Create Test case
