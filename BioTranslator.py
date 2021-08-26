@@ -87,3 +87,7 @@ class BioTranslator:
 
         return nucleotides_lst
     
+if __name__ == '__main__':
+    #Create test case
+    pass
+    
