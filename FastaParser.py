@@ -1,5 +1,5 @@
-'''Class to parse FASTA files to test my biotools class. This class will
-be updated to better parse FASTA files.'''
+'''Class to parse FASTA files to test my biotools class. This class will be updated to better parse FASTA files. 
+This class is only used for testing purposes and will be later updated to more properly parse FASTA files.'''
 
 def parseFasta(fastafile):
     description = ''
