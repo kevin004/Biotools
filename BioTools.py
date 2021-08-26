@@ -25,9 +25,9 @@ class BioTools(BioSequence, BioTranslator, BioAnalyzer):
             self.rev_transcribe()
             self.translate()
             return
+        #Need to modify.
         if self.AA_sequence:
             self.rev_translate()
-            self.rev_transcribe()
             return
         if self.DNA_sequence:
             self.transcribe()
