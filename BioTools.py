@@ -1,5 +1,5 @@
 '''Main class that can handle DNA/RNA/AA manipulation, determine potential coding sequences and 
-their likelihood based on consensus sequences, and analyze homology.'''
+their likelihood based on consensus sequences, and analyze homology. Derived from BioSequence, BioTranslator, and BioAnalyzer.'''
 from BioSequence import BioSequence
 from BioTranslator import BioTranslator
 from BioAnalyzer import BioAnalyzer
@@ -27,12 +27,15 @@ class BioTools(BioSequence, BioTranslator, BioAnalyzer):
             return
         if self.AA_sequence:
             self.rev_translate()
+            self.rev_transcribe()
             return
         if self.DNA_sequence:
             self.transcribe()
             self.translate()
             return
 
+    #Test each function of the classes through printing. 
+    #Need to make this easier to read and more user friendly.
     def __repr__(self):
         DNA = self.DNA_sequence
         gc = str(self.gc_content())
