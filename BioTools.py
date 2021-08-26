@@ -1,5 +1,5 @@
-'''Main class that can handle DNA/RNA/AA manipulation, determine potential coding sequences and 
-their likelihood based on consensus sequences, and analyze homology. Derived from BioSequence, BioTranslator, and BioAnalyzer.'''
+'''BioTools is a composition class that has a BioSequence, BioTranslator, and BioAnalyzer class object. It can handle DNA/RNA/AA manipulation, determine 
+potential coding sequences and their likelihood based on consensus sequences, and analyze homology.'''
 from BioSequence import BioSequence
 from BioTranslator import BioTranslator
 from BioAnalyzer import BioAnalyzer
