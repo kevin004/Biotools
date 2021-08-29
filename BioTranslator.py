@@ -18,13 +18,13 @@ class BioTranslator:
         start = self.find_start_lst()
         stop = self.find_stop_lst()
         start = start[:len(stop)]
+        codons_lst = list(CODONS.items())
 
         for j in range(len(start)):
             transl_seq = ''
-            codons_tuple = list(CODONS.items())
             for i in range(start[j], stop[j], 3):
                 codon = self.RNA_sequence[i: i+3]
-                for aa in codons_tuple:
+                for aa in codons_lst:
                     if codon in aa[1]:
                         transl_seq += aa[0]
                         break
