@@ -11,7 +11,7 @@ def parseFasta(fastafile):
         for line in nfile:
             if line[0] == '>':
                 lst.append((desc_lst, description, sequence))
-                description = line[:-1]
+                description = line.rstrip()
                 desc_lst = description.split(' ')
                 sequence = ''
             else:

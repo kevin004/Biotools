@@ -1,7 +1,7 @@
 '''Class to perform basic DNA to amino acid manipulations.'''
-from CODONS import CODONS
 from random import choice
 import FastaParser
+from CODONS import CODONS
 
 class BioTranslator:
     def __init__(self):
@@ -21,57 +21,15 @@ class BioTranslator:
 
         for j in range(len(start)):
             transl_seq = ''
+            codons_tuple = list(CODONS.items())
             for i in range(start[j], stop[j], 3):
                 codon = self.RNA_sequence[i: i+3]
-                if start == -1:
-                    break
-                if codon in CODONS['F']:
-                    transl_seq += 'F'
-                elif codon in CODONS['L']:
-                    transl_seq += 'L'
-                elif codon in CODONS['I']:
-                    transl_seq += 'I'
-                elif codon in CODONS['M']:
-                    transl_seq += 'M'
-                elif codon in CODONS['V']:
-                    transl_seq += 'V'
-                elif codon in CODONS['S']:
-                    transl_seq += 'S'
-                elif codon in CODONS['P']:
-                    transl_seq += 'P'
-                elif codon in CODONS['T']:
-                    transl_seq += 'T'
-                elif codon in CODONS['A']:
-                    transl_seq += 'A'
-                elif codon in CODONS['Y']:
-                    transl_seq += 'Y'
-                elif codon in CODONS['*']:
-                    transl_seq += '*'
-                    break
-                elif codon in CODONS['H']:
-                    transl_seq += 'H'
-                elif codon in CODONS['Q']:
-                    transl_seq += 'Q'
-                elif codon in CODONS['N']:
-                    transl_seq += 'N'
-                elif codon in CODONS['K']:
-                    transl_seq += 'K'
-                elif codon in CODONS['D']:
-                    transl_seq += 'D'
-                elif codon in CODONS['E']:
-                    transl_seq += 'E'
-                elif codon in CODONS['C']:
-                    transl_seq += 'C'
-                elif codon in CODONS['W']:
-                    transl_seq += 'W'
-                elif codon in CODONS['R']:
-                    transl_seq += 'R'
-                elif codon in CODONS['S']:
-                    transl_seq += 'S'
-                elif codon in CODONS['G']:
-                    transl_seq += 'G'
-                else:
-                    continue
+                for aa in codons_tuple:
+                    if codon in aa[1]:
+                        transl_seq += aa[0]
+                        break
+                    else:
+                        continue
             self.AA_sequence.append(transl_seq)
         return self.AA_sequence
 
