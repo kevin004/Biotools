@@ -11,7 +11,7 @@ class BioTranslator:
     def amino_acid_length(self):
         nucleotides = self.find_CDS_length()
         AA_length = [DNA // 3 for DNA in nucleotides]
-        return 
+        return AA_length
         
     #Translate list of DNA coding sequences to list of amino acid sequences and return list.
     def translate(self):
