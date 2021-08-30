@@ -15,6 +15,6 @@ def parseFasta(fastafile):
                 desc_lst = description.split(' ')
                 sequence = ''
             else:
-                sequence += line[:-1]
+                sequence += line.rstrip()
         lst.append((desc_lst, description, sequence))
     return lst[1:]
