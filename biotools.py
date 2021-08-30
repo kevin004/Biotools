@@ -38,22 +38,16 @@ class BioTools(BioSequence, BioTranslator, BioAnalyzer):
     #Need to make this easier to read and more user friendly.
     def __repr__(self):
         DNA = self.DNA_sequence
-        gc = str(self.gc_content())
-        Comp = self.complement()
-        Rcomp = self.rev_complement()
         RNA = self.RNA_sequence
         RTransc = self.rev_transcribe()
-        CDS_length = str(self.find_CDS_length())
         CDS = self.find_CDS()
         SCL = self.start_codon_likelihood()
         AA = self.AA_sequence
-        AA_length = self.amino_acid_length()
         RTransl = self.rev_translate()
-        return ('''GC: %s DNA: %s \n\nComplement: %s \n\nReverse Complement: %s\nRNA: %s 
-        \n\nReverse Transcribe: %s \n\nCDS Length: %s \nCoding Sequence:   %s SCL: %s
-        \nReverse Translate: %s (variable tRNAs)
-        \nAA Length: %s \nAmino Acid Sequence: %s\n''' % (gc, DNA, 
-        Comp, Rcomp, RNA, RTransc, CDS_length, CDS, SCL, RTransl, AA_length, AA))
+        return ('''DNA: %s \nRNA: %s \nReverseTranscribed: %s
+                \nCoding Sequences: %s \nStart Codon Likelihood: %s
+                \nAmino Acid Sequence: %s \nReverse Translation: %s\n''' 
+                % (DNA, RNA, RTransc, CDS, SCL, AA, RTransl))
     
 
 

@@ -82,27 +82,29 @@ class BioAnalyzer():
         start = start[:len(stop)]
         start_codon_chance = []
 
-        for strt in start:
+        for i in range(len(start)):
             chance = 0
-            if strt > 40 and 'TATA' in self.DNA_sequence[strt-40: strt-20]:
+            if start[i] > 40 and 'TATA' in self.DNA_sequence[start[i]-40: start[i]-20]:
                 chance += 1
-            if strt > 6 and 'G' == self.DNA_sequence[strt-6] or 'C' == self.DNA_sequence[strt-6]:
+            if start[i] > 6 and 'G' == self.DNA_sequence[start[i]-6] or 'C' == self.DNA_sequence[start[i]-6]:
                 chance += 1
-            if strt > 4 and 'G' == self.DNA_sequence[strt-4] or 'C' == self.DNA_sequence[strt-4] or 'A' == self.DNA_sequence[strt-4]:
+            if start[i] > 4 and 'G' == self.DNA_sequence[start[i]-4] or 'C' == self.DNA_sequence[start[i]-4] or 'A' == self.DNA_sequence[start[i]-4]:
                 chance += 1
-            if strt > 3 and 'G' == self.DNA_sequence[strt-3] or 'C' == self.DNA_sequence[strt-3] or 'A' == self.DNA_sequence[strt-3]:
-                if self.DNA_sequence[strt-3] == 'A' or self.DNA_sequence[strt-3] == 'G':
+            if start[i] > 3 and 'G' == self.DNA_sequence[start[i]-3] or 'C' == self.DNA_sequence[start[i]-3] or 'A' == self.DNA_sequence[start[i]-3]:
+                if self.DNA_sequence[start[i]-3] == 'A' or self.DNA_sequence[start[i]-3] == 'G':
                     chance += 2
                 else:
                     chance += 1
-            if strt > 2 and 'A' == self.DNA_sequence[strt-2] or 'C' == self.DNA_sequence[strt-2]:
+            if start[i] > 2 and 'A' == self.DNA_sequence[start[i]-2] or 'C' == self.DNA_sequence[start[i]-2]:
                 chance += 1
-            if strt > 1 and 'G' == self.DNA_sequence[strt-1] or 'C' == self.DNA_sequence[strt-1] or 'A' == self.DNA_sequence[strt-1]:
+            if start[i] > 1 and 'G' == self.DNA_sequence[start[i]-1] or 'C' == self.DNA_sequence[start[i]-1] or 'A' == self.DNA_sequence[start[i]-1]:
                 chance += 1
-            if self.DNA_sequence[strt+3] == 'G' or self.DNA_sequence[strt+3] == 'A':
+            if self.DNA_sequence[start[i]+3] == 'G' or self.DNA_sequence[start[i]+3] == 'A':
                 chance += 1
-            if self.DNA_sequence[strt+4] == 'C' or self.DNA_sequence[strt+4] == 'A':
+            if self.DNA_sequence[start[i]+4] == 'C' or self.DNA_sequence[start[i]+4] == 'A':
                 chance += 1
+            if stop[i] - start[i] < 60:
+                chance = 0
             start_codon_chance.append(chance)
         return start_codon_chance
 
