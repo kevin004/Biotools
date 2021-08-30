@@ -4,7 +4,7 @@ from biosequence import BioSequence
 from biotranslator import BioTranslator
 from bioanalyzer import BioAnalyzer
 from CODONS import CODONS
-import FastaParser
+import fastaparser
 
 class BioTools(BioSequence, BioTranslator, BioAnalyzer):
     def __init__(self, DNA_sequence='', AA_sequence='', RNA_sequence='', gene='', organism=''):
@@ -59,7 +59,7 @@ class BioTools(BioSequence, BioTranslator, BioAnalyzer):
 
 if __name__ == '__main__':
     file1 = 'sequence.fasta'
-    new_lst = FastaParser.parseFasta(file1)
+    new_lst = fastaparser.parseFasta(file1)
 
     comp = []
     for species in new_lst:

@@ -109,7 +109,7 @@ class BioAnalyzer():
     
 if __name__ == '__main__':
     file1 = 'sequence.fasta'
-    new_lst = FastaParser.parseFasta(file1)
+    new_lst = fastaparser.parseFasta(file1)
 
     comp = []
     #Create test case
