@@ -1,5 +1,5 @@
 # Biotools
-IP: Need to create tests for each individual file. Tests are created for the BioTools.py file already.
+# IP: Need to create tests for each individual file. Tests are created for the BioTools.py file already.
     Will also update the FastaParser for more advanced parsing; for now, it is simply used for testing purposes.
 
 BioTools uses composition and has a BioAnalyzer class object, BioSequence class object, and Biotranslator class object, and performs the following: Sequence manipulation, FASTA parsing, DNA homology, and determining possible coding sequences and their likelihood by examining consensus nucleotides.
