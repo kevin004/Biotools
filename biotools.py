@@ -1,5 +1,8 @@
-'''BioTools is a composition class that has a BioSequence, BioTranslator, and BioAnalyzer class object. It can handle DNA/RNA/AA manipulation, determine 
-potential coding sequences and their likelihood based on consensus sequences, and analyze homology.'''
+'''
+BioTools takes an input DNA/RNA sequence or amino acid sequence and uses the BioSequence, BioTranslator, 
+and BioAnalyzer classes to perform various manipulations on the data. It can handle DNA/RNA/AA manipulation, 
+determine potential coding sequences and their likelihood based on consensus sequences, and analyze homology.
+'''
 from biosequence import BioSequence
 from biotranslator import BioTranslator
 from bioanalyzer import BioAnalyzer
@@ -35,7 +38,6 @@ class BioTools(BioSequence, BioTranslator, BioAnalyzer):
             return
 
     #Test each function of the classes through printing. 
-    #Need to make this easier to read and more user friendly.
     def __repr__(self):
         DNA = self.DNA_sequence
         RNA = self.RNA_sequence
