@@ -2,7 +2,6 @@
 Class to perform basic DNA/RNA manipulation. Functions: complement, reverse complement, transcribe,gc content.
 '''
 import fastaparser
-from CODONS import CODONS
 
 class BioSequence:
     def __init__(self):
