@@ -3,7 +3,6 @@ Class to find potential coding sequences in segment of DNA. This class further d
 (start codon) through consensus nucleotides nearby and upstream. Functions include: find_start_lst, find_stop_lst, find_codon_lst, find_cds_length, 
 find_cds, find_cds_likelihood.
 '''
-import fastaparser
 from CODONS import CODONS
 
 class BioAnalyzer():
