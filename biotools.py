@@ -1,4 +1,5 @@
 '''
+Main
 BioTools takes an input DNA/RNA sequence or amino acid sequence and uses the BioSequence, BioTranslator, 
 and BioAnalyzer classes to perform various manipulations on the data. It can handle DNA/RNA/AA manipulation, 
 determine potential coding sequences and their likelihood based on consensus sequences, and analyze homology.
