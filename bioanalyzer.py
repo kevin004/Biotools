@@ -1,6 +1,8 @@
-'''Class to find potential coding sequences in segment of DNA. This class further determines the likelihood of a coding sequence near an 'ATG'/'AUG' 
+'''
+Class to find potential coding sequences in segment of DNA. This class further determines the likelihood of a coding sequence near an 'ATG'/'AUG' 
 (start codon) through consensus nucleotides nearby and upstream. Functions include: find_start_lst, find_stop_lst, find_codon_lst, find_cds_length, 
-find_cds, find_cds_likelihood.'''
+find_cds, find_cds_likelihood.
+'''
 import fastaparser
 from CODONS import CODONS
 
@@ -107,11 +109,3 @@ class BioAnalyzer():
                 chance = 0
             start_codon_chance.append(chance)
         return start_codon_chance
-
-    
-if __name__ == '__main__':
-    file1 = 'sequence.fasta'
-    new_lst = fastaparser.parseFasta(file1)
-
-    comp = []
-    #Create test case
