@@ -1,4 +1,6 @@
-'''Class to perform basic DNA/RNA manipulation. Functions: complement, reverse complement, transcribe,gc content.'''
+'''
+Class to perform basic DNA/RNA manipulation. Functions: complement, reverse complement, transcribe,gc content.
+'''
 import fastaparser
 from CODONS import CODONS
 
@@ -100,4 +102,3 @@ if __name__ == '__main__':
     for species in new_lst:
         seq = BioSequence(DNA_sequence=species[2])
         comp.append(seq)
-    #Create Test case
