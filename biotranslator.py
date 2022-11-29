@@ -1,6 +1,7 @@
-'''Class to perform basic DNA to amino acid manipulations.'''
+'''
+Class to perform basic DNA to amino acid manipulations.
+'''
 from random import choice
-import fastaparser
 from CODONS import CODONS
 
 class BioTranslator:
