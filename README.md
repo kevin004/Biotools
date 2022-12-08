@@ -2,9 +2,6 @@
 
 BioTools takes an input DNA, RNA, or amino acid sequence and performs the following: Sequence manipulation, FASTA parsing, DNA homology, and determining possible coding sequences and their likelihood by examining consensus nucleotides.
 
-IP: Need to create tests for each individual file. Tests are created for the BioTools.py file already.
-    Will also update the FastaParser for more advanced parsing; for now, it is simply used for testing purposes.
-
 There are eight files:
 BioTools.py - main
 BioAnalyzer.py
