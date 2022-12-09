@@ -4,19 +4,19 @@ BioTools takes an input DNA, RNA, or amino acid sequence and performs the follow
 
 There are eight files:
 
-BioTools.py - main
+biotools.py - main
 
-BioAnalyzer.py
+bioanalyzer.py - Finds potential coding sequences in segment of DNA.
 
-BioSequence.py
+biosequence.py - DNA/RNA manipulation
 
-BioTranslator.py
+biotranslator.py - DNA to amino acid manipulations.
 
-CODONS.py
+fastaparser.py - parse FASTA files
 
-FastaParser.py
+CODONS.py - dictionary of amino acid code to codon.
 
-sequence.fasta
+sequence.fasta - test sequences
 
 README.md
 
