@@ -49,7 +49,7 @@ class BioTools(BioSequence, BioTranslator, BioAnalyzer):
         RTransl = self.rev_translate()
         return ('''DNA: %s \nRNA: %s \nReverseTranscribed: %s
                 \nCoding Sequences: %s \nStart Codon Likelihood: %s
-                \nAmino Acid Sequence: %s \nReverse Translation: %s\n''' 
+                \nAmino Acid Sequences: %s \nReverse Translation: %s\n''' 
                 % (DNA, RNA, RTransc, CDS, SCL, AA, RTransl))
     
 
